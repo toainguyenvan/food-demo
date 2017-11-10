@@ -1,4 +1,4 @@
-class Initial < ActiveRecord::Migration
+class Initial < ActiveRecord::Migration[5.1]
 
   def change
     create_table :foods do |t|

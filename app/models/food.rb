@@ -1,4 +1,4 @@
-class Food < ActiveRecord::Base
+class Food < ApplicationRecord
   def fat_g
     (
       fa_sat_g.to_f + fa_mono_g.to_f + fa_poly_g.to_f
