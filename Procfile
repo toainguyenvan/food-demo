@@ -1,2 +1,2 @@
-web: cd client && npm start
+web: npm start
 api: rails s -p 3001
