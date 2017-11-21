@@ -18,3 +18,5 @@
 !/tmp/.keep
 
 .byebug_history
+config/secret.yml
+config/database.yml
