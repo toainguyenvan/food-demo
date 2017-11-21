@@ -5,7 +5,4 @@ import './index.css';
 // import '../semantic/dist/semantic.min.css';
 import './semantic-ui/semantic.min.css';
 
-ReactDOM.render(
-  <App />,
-  document.getElementById('root'), // eslint-disable-line no-undef
-);
+ReactDOM.render(<App />, document.getElementById('root')); // eslint-disable-line no-undef);
