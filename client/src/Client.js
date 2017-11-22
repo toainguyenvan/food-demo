@@ -1,7 +1,7 @@
 /* eslint-disable no-undef */
 function search(query, cb) {
-  return fetch(`api/food?q=${query}`, {
-    accept: 'application/json',
+     return fetch(`http://toainv.xyz:3000/api/food?q=${query}`, {
+     accept: 'application/json',
   }).then(checkStatus)
     .then(parseJSON)
     .then(cb);
