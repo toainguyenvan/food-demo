@@ -1,5 +1,10 @@
 set :stage, :production
 set :rails_env, :production
 set :deploy_to, "app"
-set :branch, :master
+set :branch, "master"
+
+# role :app,'ubuntu@54.255.245.92'
+# role :web,'ubuntu@54.255.245.92'
+# role :db,'ubuntu@54.255.245.924'
+
 server "54.255.245.92", user: "ubuntu", roles: %w{web app db}

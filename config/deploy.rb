@@ -3,7 +3,8 @@ lock "~> 3.10.0"
 
 set :application, "food-demo"
 set :repo_url, "git@github.com:toainguyenvan/food-demo.git"
-ask :branch, proc { `git rev-parse --abbrev-ref HEAD`.chomp }
+set :branch, fetch(:branch, "master")
+# ask :branch, proc { `git rev-parse --abbrev-ref HEAD`.chomp }
 set :pty, true
 set :linked_files, %w(config/database.yml config/application.yml)
 set :linked_dirs, %w(log tmp/pids tmp/cache tmp/sockets vendor/bundle public/system public/uploads)
