@@ -7,8 +7,10 @@ require "capistrano/deploy"
 require 'capistrano/rails/migrations'
 require 'capistrano/bundler'
 require 'capistrano/rvm'
+require 'capistrano/nginx'
 require 'capistrano/puma'
 install_plugin Capistrano::Puma
+require 'capistrano/puma/nginx'
 require "capistrano/scm/git"
 install_plugin Capistrano::SCM::Git
 
