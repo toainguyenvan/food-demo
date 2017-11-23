@@ -11,8 +11,7 @@
     "webpack-dev-server": "^2.9.4"
   },
   "scripts": {
-    "build": "react-scripts build && npm run build:clean",
-    "build:clean": "cd build && mv static/js/*.js main.js && mv static/css/*.css main.css",
+    "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
   },

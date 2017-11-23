@@ -21,7 +21,7 @@ set :deploy_to,       "/home/#{fetch(:user)}/apps/#{fetch(:application)}"
 # set :puma_init_active_record, true  # Change to false when not using ActiveRecord
 set :puma_conf, "#{shared_path}/config/puma.rb"
 
-set :linked_files, fetch(:linked_files, []).push('config/database.yml', 'config/secrets.yml', 'config/puma.rb')
+# set :linked_files, fetch(:linked_files, []).push('config/database.yml', 'config/secrets.yml', 'config/puma.rb')
 set :linked_dirs, fetch(:linked_dirs, []).push('log', 'tmp/pids', 'tmp/cache', 'tmp/sockets', 'vendor/bundle', 'public/system', 'public/uploads')
 
 
