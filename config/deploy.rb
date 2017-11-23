@@ -71,6 +71,13 @@ namespace :deploy do
     end
   end
 
+  desc 'Deploy React Client'
+  task :deploy_client do
+    on roles(:web) do
+      run "cd client && npm run build"
+    end
+  end
+
   # before :starting,     :check_revision
   # # after  :finishing,    :compile_assets
   # after  :finishing,    :cleanup
@@ -78,4 +85,5 @@ namespace :deploy do
   before 'check:linked_files', 'puma:config'
   before 'check:linked_files', 'puma:nginx_config'
   after 'puma:smart_restart', 'nginx:restart'
+  after 'puma:smart_restart', :deploy_client
 end

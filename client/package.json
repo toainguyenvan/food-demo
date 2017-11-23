@@ -11,7 +11,8 @@
     "webpack-dev-server": "^2.9.4"
   },
   "scripts": {
-    "build": "react-scripts build",
+    "build": "react-scripts build && npm run build:deploy",
+    "build:deploy": "cp -a build/ /var/www/",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
   },
